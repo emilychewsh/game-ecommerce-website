@@ -1,11 +1,10 @@
 import React from 'react'
+import "./home.css"
 
-function MyWishlist() {
+function Home() {
   return (
-    <>
       <div className='banner'></div>
-    </>
   )
 }
 
-export default MyWishlist
+export default Home

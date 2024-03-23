@@ -1,14 +1,14 @@
 const navListData = [
     {
       id: 1,
-      path: "/",
+      path: "/home",
       target: 'home',
       name: `Home`,
       icon: 'bi-house-door',
       active: true,
     },
     {
-      id: 3,
+      id: 2,
       path: "/myWishlist",
       target: 'library',
       name: `My Wishlist`,
@@ -16,7 +16,7 @@ const navListData = [
       active: false,
     },
     {
-      id: 4,
+      id: 3,
       path: "myBag",
       target: 'bag',
       name: `My Bag`,
