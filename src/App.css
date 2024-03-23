@@ -1,4 +1,35 @@
-#root {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://db.onlinewebfonts.com/c/3066b11123e63381b8e2aa554b18bf32?family=Bauhaus+93");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0d171f;
+  --second: #0998a8;
+  --bgColor: #192938;
+}
+
+h1,
+h2,
+h4,
+p {
+  color: #ffffff;
+}
+
+body {
+  position: relative;
+  background: var(--bgColor);
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +70,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
