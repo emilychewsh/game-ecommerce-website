@@ -1,17 +1,14 @@
 import React from 'react'
-import "./main.css"
 import SideMenu from '../components/SideMenu'
 
-function Main() {
+function MyWishlist() {
   return (
     <main>
       <SideMenu />
 
-      <div className='banner'>
-        
-      </div>
+      <div className='banner'>My Wishlist</div>
     </main>
   )
 }
 
-export default Main
+export default MyWishlist

@@ -1,17 +1,14 @@
 import React from 'react'
-import "./main.css"
 import SideMenu from '../components/SideMenu'
 
-function Main() {
+function MyBag() {
   return (
     <main>
       <SideMenu />
-
-      <div className='banner'>
-        
-      </div>
+      
+      <div>My Bag</div>
     </main>
   )
 }
 
-export default Main
+export default MyBag
