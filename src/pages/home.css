@@ -1,11 +1,17 @@
 div.banner {
-    position: relative;
-    width: 80%;
-    height: 100%;
-    border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: var(--bgColor);
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
-      5px 5px 15px rgba(0, 0, 0, 0.35);
-    transition: 1s;
-  }
+  position: relative;
+  width: 80%;
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--bgColor);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  transition: 1s;
+  overflow: scroll;
+}
+
+/* Hide scrollbar in whilst scrolling games */
+.banner::-webkit-scrollbar {
+  display: none;
+}
