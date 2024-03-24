@@ -8,6 +8,7 @@ import NavListItem from './NavListItem'
 function Index() {
   const [navData, setNavData] = useState(navListData)
   const [games, setGames] = useState([])
+  const [active, setActive] = useState(false)
   
   const fetchData = () => {
     fetch("http://localhost:5173/src/data/db.json")
@@ -21,6 +22,10 @@ function Index() {
   useEffect(() => {
     fetchData()
   }, [])
+
+  const handleToggleActive = () => {
+    setActive(!active)
+  }
 
   return (
     <div className='main'>
