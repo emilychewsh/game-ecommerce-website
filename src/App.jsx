@@ -7,6 +7,7 @@ import Home from "./pages/Home"
 import MyBag from "./pages/MyBag"
 import MyWishlist from "./pages/MyWishlist"
 import Index from "./components/Index"
+import SingleProduct from "./pages/SingleProduct"
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
         <Router>
             <Routes>
               <Route path="/" element={<Index />} >
-                <Route path="/home" element={<Home />} />
+                <Route index element={<Home />} />
+                <Route path="/:id" element={<SingleProduct />} />
                 <Route path="/myWishlist" element={<MyWishlist />} />
                 <Route path="/myBag" element={<MyBag />} />
               </Route>

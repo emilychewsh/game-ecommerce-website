@@ -1,7 +1,7 @@
 const navListData = [
     {
       id: 1,
-      path: "/home",
+      path: "/",
       target: 'home',
       name: `Home`,
       icon: 'bi-house-door',
