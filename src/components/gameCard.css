@@ -1,0 +1,29 @@
+.gameCard {
+    position: relative;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    width: auto;
+    height: 400px;
+    background: var(--bgColor);
+}
+
+.gameCard img {
+    object-fit: cover;
+    object-position: center;
+    height: 10vw;
+    width: 100%;
+}
+
+.gameCard .like {
+    margin-left: 10px;
+}
+
+.gameCard .gameTitle {
+    font-family: 'Bauhaus 93';
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.gameCard .gamePrice {
+    color: black;
+}

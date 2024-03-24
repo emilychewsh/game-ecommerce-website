@@ -1,7 +1,7 @@
-import Card from 'react-bootstrap/Card'
 import React from 'react'
 import "./home.css"
 import Header from '../components/Header'
+import GameCard from '../components/GameCard'
 
 function Home( {games} ) {
 
@@ -10,17 +10,12 @@ function Home( {games} ) {
       <div className='banner'>
         <Header />
 
-        <div className='cards'>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="{games.id}" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+        <div className='row'>
+          {
+            games.map(game => (
+              <GameCard key={game.id} game={game} />
+            ))
+          }
         </div>
       </div>
   )
