@@ -4,8 +4,6 @@ import './header.css'
 function Header() {
 
 
-
-
   return (
     <header>
         <a href='#' className='menu'>

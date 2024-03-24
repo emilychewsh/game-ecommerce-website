@@ -7,25 +7,6 @@ import NavListItem from './NavListItem'
 
 function Index() {
   const [navData, setNavData] = useState(navListData)
-  const [games, setGames] = useState([])
-  const [active, setActive] = useState(false)
-  
-  const fetchData = () => {
-    fetch("http://localhost:5173/src/data/db.json")
-      .then(res => res.json())
-      .then(data => {
-        setGames(data)
-      })
-      .catch(e => console.log(e.message))
-  }
-  
-  useEffect(() => {
-    fetchData()
-  }, [])
-
-  const handleToggleActive = () => {
-    setActive(!active)
-  }
 
   return (
     <div className='main'>
@@ -38,9 +19,14 @@ function Index() {
         <ul className='nav'>
           {
             navData.map(item => (
-              <NavListItem key={item.id} item={item} games={games} />
+              <NavListItem key={item.id} item={item} />
             ))
           }
+          {/* <li>
+            <NavLink className="Home" to="/" games={games}>
+                <span className="bi bi-house-door"> Home </span>
+            </NavLink>
+          </li> */}
         </ul>
         </div>
         <Outlet />
