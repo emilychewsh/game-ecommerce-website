@@ -1,10 +1,8 @@
 .gameCard {
-    position: relative;
     padding: 25px 20px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     width: auto;
     height: 400px;
-    background: var(--bgColor);
 }
 
 .gameCard img {
