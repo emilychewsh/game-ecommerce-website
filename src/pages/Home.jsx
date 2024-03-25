@@ -47,7 +47,7 @@ function Home( {games} ) {
         <section id='categories' className='categories'>
           <div className='container-fluid mt-2'>
             <div className='row'>
-              <div className='col-lg-8'>
+              <div className='col-lg-8 d-flex align-items-center justify-content-start'>
                 <ul className='filters'>
                   {
                     filters.map(filter => (
@@ -61,7 +61,12 @@ function Home( {games} ) {
                 </ul>
               </div>
 
-              <div className='col-lg-4'></div>
+              <div className='col-lg-4 d-flex align-items-center justify-content-end'>
+                <div className='search'>
+                  <input type='text' name='search' placeholder='Search for Game' />
+                  <i className='bi bi-search'></i>
+                </div>
+              </div>
             </div>
           </div>
         </section>
