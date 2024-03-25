@@ -39,6 +39,14 @@ function Home( {games} ) {
     setData(games.filter(game => game.category === category))
   }
 
+  // Search Bar function
+  const [text, setText] = useState("")
+
+  const handleSearchGames = (e) => {
+    setData(games.filter(game => game.title.toLowerCase().includes(e.target.value.toLowerCase())))
+    setText(e.target.value)
+  } 
+
   return (
     
       <div className='banner'>
@@ -63,7 +71,12 @@ function Home( {games} ) {
 
               <div className='col-lg-4 d-flex align-items-center justify-content-end'>
                 <div className='search'>
-                  <input type='text' name='search' placeholder='Search for Game' />
+                  <input 
+                  type='text' 
+                  name='search' 
+                  placeholder='Search for Game' 
+                  value={text} 
+                  onChange={handleSearchGames}/>
                   <i className='bi bi-search'></i>
                 </div>
               </div>
