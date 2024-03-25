@@ -1,10 +1,13 @@
 import React from 'react'
 import GameCard from '../components/GameCard'
+import Header from '../components/Header'
 
 function MyWishlist( {games} ) {
   return (
     <>
       <div className='banner'>
+        <Header /> 
+
         <section className='wishlist'>
           <div className='container-fluid'>
             <div className='row mb-3'>
