@@ -40,7 +40,7 @@ function App() {
                 <Route index element={<Home games={games}/>} />
                 <Route path="/:id" element={<SingleProduct />} />
                 <Route path="/myWishlist" element={<MyWishlist games={wishlist} />} />
-                <Route path="/myBag" element={<MyBag bag={bag} />} />
+                <Route path="/myBag" element={<MyBag games={bag} />} />
               </Route>
             </Routes>
         </Router>

@@ -6,14 +6,22 @@ import { AppContext } from '../App';
 
 function GameCard( {game} ) {
 
+    // UseContext hook for adding games to wishlist and bag
     const {wishlist, setWishlist, bag, setBag} = useContext(AppContext)
 
+    //Fx to handle adding and removing games to wishlist
     const handleAddToWishlist = game => {
         setWishlist([...wishlist, game])
     }
 
     const handleRemoveFromWishlist = game => {
         setWishlist(wishlist.filter(item=> item.id !== game.id))
+    }
+
+    //Fx to handle adding games to wishlist
+    const handleAddToBag = game => {
+        if (bag.includes(game)) return;
+        setBag([...bag, game])
     }
 
     return (
@@ -26,7 +34,7 @@ function GameCard( {game} ) {
                         <Card.Text className='gamePrice'>
                             {`A$ ${game.price}`}
                         </Card.Text>
-                        <Button variant="primary">Add To Cart</Button>
+                        <Button variant="primary" onClick={() => handleAddToBag(game)}>Add To Cart</Button>
                         <Button variant="primary" className={`like ${wishlist.includes(game) ? 'active' : undefined}`} 
                         onClick={
                             wishlist.includes(game) ? 
