@@ -16,6 +16,10 @@
     margin-left: 10px;
 }
 
+.gameCard .like.active {
+    color: red;
+}
+
 .gameCard .gameTitle {
     font-family: 'Bauhaus 93';
     text-transform: uppercase;

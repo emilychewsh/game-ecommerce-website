@@ -27,7 +27,7 @@ function GameCard( {game} ) {
                             {`A$ ${game.price}`}
                         </Card.Text>
                         <Button variant="primary">Add To Cart</Button>
-                        <Button variant="primary" className='like' 
+                        <Button variant="primary" className={`like ${wishlist.includes(game) ? 'active' : undefined}`} 
                         onClick={
                             wishlist.includes(game) ? 
                             () => handleRemoveFromWishlist(game) :
