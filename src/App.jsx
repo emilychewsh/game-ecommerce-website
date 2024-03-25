@@ -1,6 +1,6 @@
 import "bootstrap-icons/font/bootstrap-icons.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect, useContext} from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from "./pages/Home"
@@ -8,6 +8,8 @@ import MyBag from "./pages/MyBag"
 import MyWishlist from "./pages/MyWishlist"
 import Index from "./components/Index"
 import SingleProduct from "./pages/SingleProduct"
+
+export const AppContext = React.createContext();
 
 function App() {
 
@@ -26,18 +28,23 @@ function App() {
     fetchData()
   }, [])
 
+  const [wishlist, setWishlist] = useState([])
+  const [bag, setBag] = useState([])
+
   return (
     <>
+      <AppContext.Provider value={{wishlist, setWishlist, bag, setBag}}>
         <Router>
             <Routes>
               <Route path="/" element={<Index />} >
                 <Route index element={<Home games={games}/>} />
                 <Route path="/:id" element={<SingleProduct />} />
-                <Route path="/myWishlist" element={<MyWishlist />} />
-                <Route path="/myBag" element={<MyBag />} />
+                <Route path="/myWishlist" element={<MyWishlist games={wishlist} />} />
+                <Route path="/myBag" element={<MyBag bag={bag} />} />
               </Route>
             </Routes>
         </Router>
+      </AppContext.Provider>
     </>
   )
 }
