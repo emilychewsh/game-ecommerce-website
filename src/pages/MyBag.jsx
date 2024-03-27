@@ -30,7 +30,7 @@ function MyBag( { games } ) {
 
         {
           games.length === 0 ? (
-            <h2>Your Bag is empty</h2>
+            <h2>Your Bag is empty...</h2>
           ) :
           (
             <>
@@ -57,7 +57,7 @@ function MyBag( { games } ) {
               </div>
 
               <div className='row d-flex justify-content-between mt-5'>
-                <div className='col-lg-2 align-items-center'>
+                <div className='col-lg-2 align-items-center start'>
                   <p className='itemCount'>Total items: {games.length} </p>
                 </div>
 

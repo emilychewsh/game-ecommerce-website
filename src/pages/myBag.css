@@ -10,11 +10,12 @@
   transition: 1s;
 }
 
+
 .shopBagTable {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 98%;
+  width: 95%;
   color: #ffffff;
   border-radius: 20px;
   background: var(--bgColor);
@@ -33,6 +34,7 @@
 
 .itemCount {
   font-size: 1.3rem;
+  margin-left: 20px;
 }
 
 .payment {
@@ -41,6 +43,7 @@
   gap: 50px;
   font-size: 1.3rem;
   color: #ffffff;
+  margin-right: 20px;
 }
 
 .payment a {

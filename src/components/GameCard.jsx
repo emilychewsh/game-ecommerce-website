@@ -27,7 +27,10 @@ function GameCard( {game} ) {
     return (
         <div className="col-xl-3 col-lg-4 col-md-6">
             <div className='gameCard'>
-                <Card style={{ width: '18rem' }}>
+                <Card
+                bg="light"
+                style= {{ width: '18rem' }}
+                >
                     <Card.Img variant="top" src={game.img} />
                     <Card.Body>
                         <Card.Title className='gameTitle'>{game.title}</Card.Title>

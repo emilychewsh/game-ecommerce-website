@@ -8,6 +8,7 @@ import MyBag from "./pages/MyBag"
 import MyWishlist from "./pages/MyWishlist"
 import Index from "./components/Index"
 import SingleProduct from "./pages/SingleProduct"
+import NotFound from "./pages/NotFound"
 
 export const AppContext = React.createContext();
 
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/:id" element={<SingleProduct />} />
                 <Route path="/myWishlist" element={<MyWishlist games={wishlist} />} />
                 <Route path="/myBag" element={<MyBag games={bag} />} />
+                <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
         </Router>

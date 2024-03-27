@@ -10,27 +10,22 @@ function Index() {
 
   return (
     <div className='main'>
-      <div className='index'>
-        <div className="logo">
-          <i className="bi bi-controller"></i>
-          <span className="brand">Humble Games</span>
-        </div>
+        <div className='index'>
+          <div className="logo">
+            <i className="bi bi-controller"></i>
+            <span className="brand">Crux Games</span>
+          </div>
 
-        <ul className='nav'>
-          {
-            navData.map(item => (
-              <NavListItem key={item.id} item={item} />
-            ))
-          }
-          {/* <li>
-            <NavLink className="Home" to="/" games={games}>
-                <span className="bi bi-house-door"> Home </span>
-            </NavLink>
-          </li> */}
-        </ul>
+          <ul className='nav'>
+            {
+              navData.map(item => (
+                <NavListItem key={item.id} item={item} />
+              ))
+            }
+          </ul>
+          </div>
+          <Outlet />
         </div>
-        <Outlet />
-    </div>
   )
 }
 
