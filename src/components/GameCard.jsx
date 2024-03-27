@@ -18,11 +18,11 @@ function GameCard( {game} ) {
         setWishlist(wishlist.filter(item=> item.id !== game.id))
     }
 
-    //Fx to handle adding games to wishlist
+    //Fx to handle adding games to bag
     const handleAddToBag = game => {
         if (bag.includes(game)) return;
         setBag([...bag, game])
-    }
+    } 
 
     return (
         <div className="col-xl-3 col-lg-4 col-md-6">
@@ -34,7 +34,8 @@ function GameCard( {game} ) {
                         <Card.Text className='gamePrice'>
                             {`A$ ${game.price}`}
                         </Card.Text>
-                        <Button variant="primary" onClick={() => handleAddToBag(game)}>Add To Cart</Button>
+                        <Button variant="primary" onClick={() => handleAddToBag(game)}> 
+                        {bag.includes(game) ? 'Added To Cart!' : "Add To Cart"}</Button>
                         <Button variant="primary" className={`like ${wishlist.includes(game) ? 'active' : undefined}`} 
                         onClick={
                             wishlist.includes(game) ? 

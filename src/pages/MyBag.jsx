@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import './myBag.css'
 import Header from '../components/Header'
 import ShopBagItem from '../components/ShopBagItem'
 
 function MyBag( { games } ) {
+  const [total, setTotal] = useState(0)
+
+  const handleTotalPay = () => {
+    return games
+    .map(game => game.price)
+    .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+    .toFixed(2)
+  }
+
+  useEffect(() => {
+    setTotal(handleTotalPay)
+  }, [games])
+
   return (
     <div className='banner'>
       <Header />
@@ -41,7 +54,21 @@ function MyBag( { games } ) {
                       </tbody>
                   </table>
                 </div>
+              </div>
 
+              <div className='row d-flex justify-content-between mt-5'>
+                <div className='col-lg-2 align-items-center'>
+                  <p className='itemCount'>Total items: {games.length} </p>
+                </div>
+
+                <div className='col-lg-10 d-flex justify-content-end'>
+                  <div className='payment'>
+                    Total: {total}
+                    <a href='#'>Check out
+                          <i className='bi bi-wallet-fill'></i>
+                    </a>
+                  </div>
+                </div>
               </div>
             </>
           )
