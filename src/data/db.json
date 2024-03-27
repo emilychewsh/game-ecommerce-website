@@ -8,28 +8,28 @@
     "price": 36.50,
     "img": "src/assets/games/hades-bg.jpeg",
     "trailer": "https://youtu.be/Bz8l935Bv0Y?si=gKUe9hsSSxlJGUcL",
-    "active": false
+    "active": true
   },
   {
     "id": 2,
-    "title": "Mario Kart 8 Deluxe",
-    "description": "Mario Kart 8 Deluxe includes all downloadable content (DLC) for Mario Kart 8, including characters, courses, and vehicle components, into a single product for Nintendo Switch, as well as being the first Mario game for the console.",
-    "category": "Racing",
-    "rating": 3,
-    "price": 52.56,
-    "img": "src/assets/games/mario-bg.jpeg",
-    "trailer": "https://www.youtube.com/embed/tKlRN2YpxRE",
+    "title": "Elden Ring",
+    "description": "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "category": "Action",
+    "rating": 5,
+    "price": "89.95",
+    "img": "src/assets/games/eldenring-bg.jpeg",
+    "trailer": "https://youtu.be/qLZenOn7WUo?si=0ppeRMK8L8hmA85l",
     "active": false
   },
   {
     "id": 3,
-    "title": "Dota II",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
-    "category": "MOBA",
+    "title": "Helldivers 2",
+    "description": "The Galaxy’s Last Line of Offence. Enlist in the Helldivers and join the fight for freedom across a hostile galaxy in a fast, frantic, and ferocious third-person shooter.",
+    "category": "Racing",
     "rating": 4,
-    "price": 85.0,
-    "img": "src/assets/games/dota-2-bg.jpg",
-    "trailer": "https://www.youtube.com/embed/-cSFPIwMEq4",
+    "price": 59.95,
+    "img": "src/assets/games/helldivers2-bg.jpeg",
+    "trailer": "https://youtu.be/UC5EpJR0GBQ?si=pAkEaT5KqgHfYpjs",
     "active": false
   },
   {
@@ -43,7 +43,6 @@
     "trailer": "https://www.youtube.com/embed/_o7Ip64-Sio",
     "active": false
   },
-
   {
     "id": 5,
     "title": "Forza Horizon 5",
@@ -68,15 +67,15 @@
   },
   {
     "id": 7,
-    "title": "Fortnite Spider-Man",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
-    "category": "Battle",
-    "rating": 3,
-    "price": 69.0,
-    "img": "src/assets/games/fortnite-bg.jpeg",
-    "trailer": "https://www.youtube.com/embed/7bq0Boq2B3Y",
+    "title": "Persona 5 Royal",
+    "description": "Don the mask and join the Phantom Thieves of Hearts as they stage grand heists, infiltrate the minds of the corrupt, and make them change their ways!",
+    "category": "Anime",
+    "rating": 4,
+    "price": 94.95,
+    "img": "src/assets/games/persona5-bg.jpeg",
+    "trailer": "https://youtu.be/SKpSpvFCZRw?si=u3u7p-S0s4iBaV1l",
     "active": false
-  },
+    },
   {
     "id": 8,
     "title": "Diablo III",
@@ -97,17 +96,39 @@
     "price": "Free to Play",
     "img": "src/assets/games/lol-bg.jpeg",
     "trailer": "https://www.youtube.com/embed/vzHrjOMfHPY",
-    "active": true
+    "active": false
   },
   {
     "id": 10,
-    "title": "League of Legends",
-    "description": "League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other's base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory.",
-    "category": "MOBA",
+    "title": "Mario Kart 8 Deluxe",
+    "description": "Mario Kart 8 Deluxe includes all downloadable content (DLC) for Mario Kart 8, including characters, courses, and vehicle components, into a single product for Nintendo Switch, as well as being the first Mario game for the console.",
+    "category": "Racing",
     "rating": 3,
-    "price": "Free to Play",
-    "img": "src/assets/games/lol-bg.jpeg",
-    "trailer": "https://www.youtube.com/embed/vzHrjOMfHPY",
-    "active": true
+    "price": 52.56,
+    "img": "src/assets/games/mario-bg.jpeg",
+    "trailer": "https://www.youtube.com/embed/tKlRN2YpxRE",
+    "active": false
+  },
+  {
+  "id": 11,
+  "title": "Dota II",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+  "category": "Action",
+  "rating": 4,
+  "price": 85.0,
+  "img": "src/assets/games/dota-2-bg.jpg",
+  "trailer": "https://www.youtube.com/embed/-cSFPIwMEq4",
+  "active": false
+  },
+  {
+    "id": 12,
+    "title": "Fortnite Spider-Man",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+    "category": "Battle",
+    "rating": 3,
+    "price": 69.0,
+    "img": "src/assets/games/fortnite-bg.jpeg",
+    "trailer": "https://www.youtube.com/embed/7bq0Boq2B3Y",
+    "active": false
   }
 ]
