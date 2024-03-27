@@ -7,14 +7,16 @@ function MyBag( { games } ) {
   const [total, setTotal] = useState(0)
 
   const handleTotalPay = () => {
-    return games
+    let total = games
     .map(game => game.price)
     .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
     .toFixed(2)
+
+    return total
   }
 
   useEffect(() => {
-    setTotal(handleTotalPay)
+    setTotal(handleTotalPay())
   }, [games])
 
   return (

@@ -1,6 +1,8 @@
 import React, {useContext} from 'react'
+import { NavLink } from 'react-router-dom'
 import './header.css'
 import { AppContext } from "../App"
+import { Nav } from 'react-bootstrap'
 
 
 function Header() {
@@ -12,14 +14,14 @@ function Header() {
         </a>
         
         <div className='userItems'>
-            <a href='#' className='icon'>
+            <NavLink to="/myWishlist" className='icon'>
                 <i className='bi bi-heart-fill'></i>
                 <span className='like'>{wishlist.length}</span>
-            </a>
-            <a href='#' className='icon'>
+            </NavLink>
+            <NavLink to="/myBag" className='icon'>
                 <i className='bi bi-bag-fill'></i>
                 <span className='like'>{bag.length}</span>
-            </a>
+            </NavLink>
         </div>
     </header>
   )
