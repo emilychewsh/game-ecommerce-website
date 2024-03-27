@@ -30,7 +30,7 @@ function MyBag( { games } ) {
 
         {
           games.length === 0 ? (
-            <h2>Your Bag is empty...</h2>
+            <h2 style={{margin: 10}}>Your Bag is empty...</h2>
           ) :
           (
             <>
