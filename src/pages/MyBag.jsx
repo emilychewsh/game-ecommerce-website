@@ -1,10 +1,14 @@
-import React, { useState,useEffect } from 'react'
+import { Modal, Button } from 'react-bootstrap';
+import React, { useState,useEffect, useContext } from 'react'
 import './myBag.css'
 import Header from '../components/Header'
 import ShopBagItem from '../components/ShopBagItem'
+import { AppContext } from '../App'
 
 function MyBag( { games } ) {
   const [total, setTotal] = useState(0)
+  const { bag, setBag} = useContext(AppContext)
+  const [showModal, setShowModal] = useState(false);
 
   const handleTotalPay = () => {
     let total = games
@@ -18,6 +22,15 @@ function MyBag( { games } ) {
   useEffect(() => {
     setTotal(handleTotalPay())
   }, [games])
+
+  const handleClearBag = () => {
+    setBag([]);
+    setShowModal(true);
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false); // Close modal
+  };
 
   return (
     <div className='banner'>
@@ -66,7 +79,7 @@ function MyBag( { games } ) {
                 <div className='col-lg-10 d-flex justify-content-end'>
                   <div className='payment'>
                     Total: {total}
-                    <a href='#'>Check out
+                    <a href='#' onClick={handleClearBag}>Check out
                           <i className='bi bi-wallet-fill'></i>
                     </a>
                   </div>
@@ -76,6 +89,20 @@ function MyBag( { games } ) {
           )
         }
       </section>
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Checkout</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Successfully checked out items!
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </div>
   )
 }
