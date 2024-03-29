@@ -33,6 +33,7 @@ div.banner {
   border-radius: 10px;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: "Russo One", sans-serif;
 }
 
 .filters li:hover,

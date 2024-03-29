@@ -10,7 +10,7 @@
 :root {
   --primary: #ebf4f5;
   --second: #b5c6e0;
-  --bgColor: #ebf4f5;
+  --bgColor: rgb(235, 244, 245, 0.5);
 }
 
 h1,

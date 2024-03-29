@@ -59,7 +59,8 @@
   right: 0;
   bottom: 0;
   padding: 30px;
-  background-color: white;
+  /* background-color: white; */
+  background: url("../images/bg.jpg");
   display: flex;
   justify-content: space-between;
   align-items: center;
