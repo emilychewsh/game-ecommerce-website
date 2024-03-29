@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './gameCard.css'
 import { AppContext } from '../App';
 
@@ -9,9 +9,11 @@ function GameCard( {game} ) {
     // UseContext hook for adding games to wishlist and bag
     const {wishlist, setWishlist, bag, setBag} = useContext(AppContext)
 
+
     //Fx to handle adding and removing games to wishlist
     const handleAddToWishlist = game => {
         setWishlist([...wishlist, game])
+        
     }
 
     const handleRemoveFromWishlist = game => {
@@ -30,6 +32,7 @@ function GameCard( {game} ) {
                 <Card
                 bg="light"
                 style= {{ width: '18rem' }}
+                border='dark'
                 >
                     <Card.Img variant="top" src={game.img} />
                     <Card.Body>

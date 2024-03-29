@@ -9,12 +9,12 @@
 .shopBagItem td,
 .shopBagItem th {
     background: transparent;
-    color: #ffffff;
+    color: #000000;
     font-size: 1.2rem;
 }
   
 .shopBagItem a {
-    color: #ffffff;
+    color: #000000;
     font-size: 1.6rem;
 }
   

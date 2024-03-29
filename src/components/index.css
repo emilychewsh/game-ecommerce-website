@@ -13,13 +13,14 @@
   }
 
 .index .logo {
-  font-family: 'Bauhaus 93';
+  font-family: "Russo One", sans-serif;
+  font-weight: 800;
   position: relative;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 15px;
-  color: #ffffff;
+  color: #000000;
   font-size: 3.5em;
   font-weight: 600;
   letter-spacing: 1px;
@@ -36,7 +37,7 @@
 
 .index .nav li {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 1.2em;
   letter-spacing: 1px;
   display: inline-flex;
@@ -58,11 +59,7 @@
   right: 0;
   bottom: 0;
   padding: 30px;
-  border: 8px solid var(--bgColor);
-  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.15),
-    5px 5px 15px rgba(0, 0, 0, 0.35),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.15),
-    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;

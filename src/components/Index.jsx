@@ -3,7 +3,7 @@ import "./index.css"
 import { NavLink, Outlet } from 'react-router-dom'
 import navListData from '../data/navListData'
 import NavListItem from './NavListItem'
-
+import background from "../images/background.jpg"
 
 function Index() {
   const [navData, setNavData] = useState(navListData)

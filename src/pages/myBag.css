@@ -16,7 +16,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 95%;
-  color: #ffffff;
+  color: #000000;
   border-radius: 20px;
   background: var(--bgColor);
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
@@ -29,7 +29,7 @@
 
 .shopBagTable thead tr th {
   background: transparent;
-  color: #ffffff;
+  color: #000000;
 }
 
 .itemCount {
@@ -42,14 +42,14 @@
   align-items: center;
   gap: 50px;
   font-size: 1.3rem;
-  color: #ffffff;
+  color: #000000;
   margin-right: 20px;
 }
 
 .payment a {
   padding: 10px 20px;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   border-radius: 15px;
   display: inline-flex;
   align-items: center;

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 function NavListItem({ item }) {
   return (
     <li>
-        <NavLink className={item.name} to={item.path} style={{color: 'white'}}>
+        <NavLink className={item.name} to={item.path} style={{color: 'black'}}>
             <span className={`bi ${item.icon}`}> {item.name} </span>
         </NavLink>
     </li>

@@ -27,7 +27,7 @@ div.banner {
 }
 
 .filters li {
-  color: #ffffff;
+  color: #000000;
   padding: 10px 25px;
   transition: 0.3s;
   border-radius: 10px;
@@ -43,7 +43,7 @@ div.banner {
 
 /* Search bar */
 .search {
-  color: #9c9c9c;
+  color: #000000;
   display: inline-flex;
   gap: 15px;
   align-items: center;
@@ -64,9 +64,9 @@ div.banner {
 }
 
 .search input:focus {
-  color: #ffffff;
+  color: #000000;
 }
 
 .search input::placeholder {
-  color: #9c9c9c;
+  color: #000000;
 }
