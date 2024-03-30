@@ -31,7 +31,7 @@
       "price": 59.95,
       "img": "src/assets/games/helldivers2-bg.jpeg",
       "trailer": "https://youtu.be/UC5EpJR0GBQ?si=pAkEaT5KqgHfYpjs",
-      "active": true
+      "active": false
     },
     {
       "id": "4",

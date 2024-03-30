@@ -23,10 +23,11 @@ function MyBag( { games } ) {
     setTotal(handleTotalPay())
   }, [games])
 
+  //Setting state of bag and wishlist once component mounts, also helps with Header userItem count
   useEffect(() => {
     const savedBag = JSON.parse(localStorage.getItem('bag')) || [];
     setBag(savedBag);
-}, [setBag]);
+  }, [setBag]);
 
   useEffect(() => {
     const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];

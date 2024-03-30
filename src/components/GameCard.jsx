@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import { Modal } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import React, { useContext, useEffect, useState } from 'react'
 import './gameCard.css'
@@ -8,14 +9,19 @@ function GameCard( {game} ) {
 
     // UseContext hook for adding games to wishlist and bag
     const {wishlist, setWishlist, bag, setBag} = useContext(AppContext)
-    
+    //UseState hook to show Modal when item is already in Bag
+    const [showModal, setShowModal] = useState(false)
 
     useEffect(() => {
         const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
         setBag(savedWishlist);
     }, [setWishlist]);
 
-    
+    //Handle message when user tries to click on "Add to Cart" again
+    const handleCloseModal = () => {
+        setShowModal(false) //Close modal
+    }
+
     //Fx to handle adding and removing games to wishlist
     const handleAddToWishlist = async (game) => {
       try {
@@ -80,7 +86,7 @@ const handleRemoveFromWishlist = async (game) => {
     const handleAddToBag = (game) => {
         // Check if the game is already in the bag
         if (bag.some(item => item.id === game.id)) {
-            console.log('Game already in bag');
+            setShowModal(true);
             return;
         }
         
@@ -125,6 +131,20 @@ const handleRemoveFromWishlist = async (game) => {
                         </Button>
                     </Card.Body>
                 </Card>
+
+                <Modal show={showModal} onHide={handleCloseModal}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Hi There</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Game is already in Bag!
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleCloseModal}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         </div>
     )
