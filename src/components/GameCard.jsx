@@ -22,7 +22,7 @@ function GameCard( {game} ) {
         setShowModal(false) //Close modal
     }
 
-    //Fx to handle adding and removing games to wishlist
+    // Function to handle adding a game to the wishlist
     const handleAddToWishlist = async (game) => {
       try {
           // Check if the game already exists in the wishlist
@@ -30,7 +30,8 @@ function GameCard( {game} ) {
               console.log('Game already in wishlist');
               return;
           }
-  
+          
+          // Send PATCH request to update the active attribute to true
           const response = await fetch(`http://localhost:3000/games/${game.id}`, {
               method: 'PATCH',
               headers: {
@@ -53,36 +54,38 @@ function GameCard( {game} ) {
       }
   };
 
-const handleRemoveFromWishlist = async (game) => {
-    try {
-        const response = await fetch(`http://localhost:3000/games/${game.id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                active: false, // Set active attribute to false
-            }),
-        });
-        if (response.ok) {
-            // Check if wishlist is defined before using the some method
-            if (wishlist && wishlist.some((item) => item.id === game.id)) {
-                // Filter out the removed game from wishlist
-                const updatedWishlist = wishlist.filter((item) => item.id !== game.id);
-                // Update the wishlist state with the updated array
-                setWishlist(updatedWishlist);
-                // Update localStorage with the updated wishlist
-                localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+   // Function to handle removing a game from the wishlist
+    const handleRemoveFromWishlist = async (game) => {
+        try {
+            // Send PATCH request to update the active attribute to false
+            const response = await fetch(`http://localhost:3000/games/${game.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    active: false, // Set active attribute to false
+                }),
+            });
+            if (response.ok) {
+                // Check if wishlist is defined before using the some method
+                if (wishlist && wishlist.some((item) => item.id === game.id)) {
+                    // Filter out the removed game from wishlist
+                    const updatedWishlist = wishlist.filter((item) => item.id !== game.id);
+                    // Update the wishlist state with the updated array
+                    setWishlist(updatedWishlist);
+                    // Update localStorage with the updated wishlist
+                    localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+                }
+            } else {
+                console.error('Failed to remove game from wishlist');
             }
-        } else {
-            console.error('Failed to remove game from wishlist');
+        } catch (error) {
+            console.error('Error removing game from wishlist:', error);
         }
-    } catch (error) {
-        console.error('Error removing game from wishlist:', error);
-    }
-};
+    };
 
-    //Fx to handle adding games to bag
+    // Function to handle adding a game to the bag
     const handleAddToBag = (game) => {
         // Check if the game is already in the bag
         if (bag.some(item => item.id === game.id)) {
@@ -93,7 +96,7 @@ const handleRemoveFromWishlist = async (game) => {
         // Add the game to the bag
         const updatedBag = [...bag, game];
         setBag(updatedBag);
-        localStorage.setItem('bag', JSON.stringify(updatedBag));
+        localStorage.setItem('bag', JSON.stringify(updatedBag)); // Update localStorage
     };
 
     useEffect(() => {

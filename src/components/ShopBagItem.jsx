@@ -7,8 +7,11 @@ function ShopBagItem({game, index}) {
   
   const {bag, setBag} = useContext(AppContext)
   
+  // Function to handle removing a game from the bag
   const handleRemoveFromBag = () => {
+    // Filter out the removed game from the bag
     const updatedBag = bag.filter(item => item.id !== game.id);
+    // Update the bag state with the updated array
     setBag(updatedBag);
     localStorage.setItem('bag', JSON.stringify(updatedBag));
 };

@@ -6,16 +6,18 @@ import filterGenreData from '../data/filterGenreData'
 import { AppContext } from '../App'
 
 function Home( {games} ) {
+  // State variables for games data, filters, and wishlist
   const [data, setData] = useState(games)
   const [filters, setFilters] = useState(filterGenreData)
   const {wishlist, setWishlist} = useContext(AppContext)
 
-
+  // Effect hook to load wishlist from local storage
   useEffect(() => {
     const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     setWishlist(savedWishlist);
   }, [setWishlist]);
 
+  // Effect hook to set default filter and data when games data changes
   useEffect(() => {
     // Set "All" category as active by default
     setFilters(filters.map(filter => ({
@@ -28,31 +30,33 @@ function Home( {games} ) {
     setData(games);
   }, [games]);
   
+  // Function to filter games based on category
   const handleFilterGames = (category) => {
     setFilters(
       filters.map(filter=> {
         filter.active = false;
         return {
           ...filter,
-          active: filter.name === category
+          active: filter.name === category 
         }
       })
     )
 
     if (category === "All") {
-      setData(games)
+      setData(games) // If "All" category is selected, display all games
       return
     }
 
     setData(games.filter(game => game.category === category))
   }
 
-  // Search Bar function
+  // Set variables for text in Search Bar
   const [text, setText] = useState("")
 
+  // Function to handle search input change
   const handleSearchGames = (e) => {
     setData(games.filter(game => game.title.toLowerCase().includes(e.target.value.toLowerCase())))
-    setText(e.target.value)
+    setText(e.target.value) // Update search bar text state
   } 
 
   return (

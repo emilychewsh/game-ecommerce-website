@@ -6,10 +6,11 @@ import { AppContext } from '../App';
 function MyWishlist( {games} ) {
   const { wishlist, setWishlist } = useContext(AppContext);
 
+  // Effect hook to load wishlist from local storage
   useEffect(() => {
-    const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    setWishlist(savedWishlist);
-  }, [setWishlist]);
+    const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || []; // Retrieving wishlist from local storage
+    setWishlist(savedWishlist); // Updating wishlist state
+  }, [setWishlist]); // Dependency array ensures effect runs only when setWishlist changes
   
   return (
     <>

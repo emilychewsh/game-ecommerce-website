@@ -10,6 +10,7 @@ function MyBag( { games } ) {
   const { wishlist, setWishlist, bag, setBag} = useContext(AppContext)
   const [showModal, setShowModal] = useState(false);
 
+  // Function to calculate total payment
   const handleTotalPay = () => {
     let total = games
     .map(game => game.price)
@@ -19,11 +20,12 @@ function MyBag( { games } ) {
     return total
   }
 
+  // Calculate total payment when games change
   useEffect(() => {
     setTotal(handleTotalPay())
   }, [games])
 
-  //Setting state of bag and wishlist once component mounts, also helps with Header userItem count
+  // Set bag and wishlist state when component mounts
   useEffect(() => {
     const savedBag = JSON.parse(localStorage.getItem('bag')) || [];
     setBag(savedBag);
@@ -34,12 +36,14 @@ function MyBag( { games } ) {
     setWishlist(savedWishlist);
     }, [setWishlist]);
 
+  // Function to clear bag and display checkout modal
   const handleClearBag = () => {
     setBag([]); // Clear the bag by setting it to an empty array
     localStorage.removeItem('bag'); // Remove bag data from localStorage
     setShowModal(true);
   };
 
+  // Function to close checkout modal
   const handleCloseModal = () => {
     setShowModal(false); // Close modal
   };

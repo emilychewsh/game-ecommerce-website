@@ -42,7 +42,7 @@
       "price": 84.95,
       "img": "src/assets/games/king-of-fighters-xv.jpeg",
       "trailer": "https://youtu.be/i-R_EQUIRA8?si=0BqJ4arivBoFhic1",
-      "active": false
+      "active": true
     },
     {
       "id": "5",
@@ -75,7 +75,7 @@
       "price": 94.95,
       "img": "src/assets/games/persona5-bg.jpeg",
       "trailer": "https://youtu.be/SKpSpvFCZRw?si=u3u7p-S0s4iBaV1l",
-      "active": true
+      "active": false
     },
     {
       "id": "8",

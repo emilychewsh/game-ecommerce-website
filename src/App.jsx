@@ -10,12 +10,14 @@ import Index from "./components/Index"
 import SingleProduct from "./pages/SingleProduct"
 import NotFound from "./pages/NotFound"
 
+// Creating a context to manage global state
 export const AppContext = React.createContext();
 
 function App() {
+  // State for storing games data fetched from the server
+  const [games, setGames] = useState([]) 
 
-  const [games, setGames] = useState([])
-  
+  // Function to fetch games data from the server
   const fetchData = () => {
     fetch("http://localhost:3000/games")
       .then(res => res.json())
@@ -25,10 +27,12 @@ function App() {
       .catch(e => console.log(e.message))
   }
   
+  // Effect hook to fetch data when the component mounts
   useEffect(() => {
     fetchData()
   }, [])
 
+   // State for storing variables for wishlist and shopping bag items
   const [wishlist, setWishlist] = useState([])
   const [bag, setBag] = useState([])
 
