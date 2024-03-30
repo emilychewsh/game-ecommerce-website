@@ -1,5 +1,7 @@
 # CRUX GAMES SHOP \- Game Ecommerce Web App
 
+![Crux Games image](src/images/cruximage.JPG)
+
 Welcome to my first React JS project! Using React \- Vite <br>
 Currently, two official plugins are available:
 
@@ -81,6 +83,8 @@ Displays games that have been added to Cart.
 Background image is sourced from [FreePik](https://www.freepik.com/free-vector/gradient-white-monochrome-background_15441897.htm)
 
 ## A Quick GIF Demo of Crux Games Shop!
+
+![cruxgamesdemo](src/images/cruxgamesgif.gif)
 
 ## Contribution Guidelines
 
