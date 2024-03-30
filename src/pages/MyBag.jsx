@@ -7,7 +7,7 @@ import { AppContext } from '../App'
 
 function MyBag( { games } ) {
   const [total, setTotal] = useState(0)
-  const { bag, setBag} = useContext(AppContext)
+  const { wishlist, setWishlist, bag, setBag} = useContext(AppContext)
   const [showModal, setShowModal] = useState(false);
 
   const handleTotalPay = () => {
@@ -27,6 +27,11 @@ function MyBag( { games } ) {
     const savedBag = JSON.parse(localStorage.getItem('bag')) || [];
     setBag(savedBag);
 }, [setBag]);
+
+  useEffect(() => {
+    const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    setWishlist(savedWishlist);
+    }, [setWishlist]);
 
   const handleClearBag = () => {
     setBag([]); // Clear the bag by setting it to an empty array
