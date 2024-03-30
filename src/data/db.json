@@ -1,7 +1,7 @@
 {
   "games": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Hades",
       "description": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre",
       "category": "RPG",
@@ -12,7 +12,7 @@
       "active": false
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Elden Ring",
       "description": "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
       "category": "Action",
@@ -23,7 +23,7 @@
       "active": false
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Helldivers 2",
       "description": "The Galaxy’s Last Line of Offence. Enlist in the Helldivers and join the fight for freedom across a hostile galaxy in a fast, frantic, and ferocious third-person shooter.",
       "category": "Action",
@@ -34,7 +34,7 @@
       "active": false
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "King of Fighters XV",
       "description": "SHATTER ALL EXPECTATIONS! Transcend beyond your limits with KOF XV!",
       "category": "Battle",
@@ -45,7 +45,7 @@
       "active": false
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "The Legend of Zelda",
       "description": "Embark on a perilous quest to find the missing princess and unravel the truth behind a cataclysmic event that has sent the kingdom into turmoil.",
       "category": "RPG",
@@ -56,7 +56,7 @@
       "active": false
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Halo Infinite",
       "description": "From one of gaming's most iconic sagas, Halo is bigger than ever. Featuring an expansive open-world campaign and a dynamic free to play multiplayer experience.",
       "category": "Battle",
@@ -67,7 +67,7 @@
       "active": false
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Persona 5 Royal",
       "description": "Don the mask and join the Phantom Thieves of Hearts as they stage grand heists, infiltrate the minds of the corrupt, and make them change their ways!",
       "category": "Anime",
@@ -78,7 +78,7 @@
       "active": true
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Street Fighter V",
       "description": "Experience the intensity of head-to-head battles with Street Fighter® V! Choose from 16 iconic characters, then battle against friends online or offline with a robust variety of match options.",
       "category": "Battle",
@@ -89,7 +89,7 @@
       "active": false
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "League of Legends",
       "description": "League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other's base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory.",
       "category": "MOBA",
@@ -100,7 +100,7 @@
       "active": false
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Mario Kart 8 Deluxe",
       "description": "Mario Kart 8 Deluxe includes all downloadable content (DLC) for Mario Kart 8, including characters, courses, and vehicle components, into a single product for Nintendo Switch, as well as being the first Mario game for the console.",
       "category": "Racing",
@@ -111,7 +111,7 @@
       "active": false
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "FINAL FANTASY VII",
       "description": "Cloud Strife, an ex-SOLDIER operative, descends on the mako-powered city of Midgar. The world of the timeless classic FINAL FANTASY VII is reborn, using cutting-edge graphics technology, a new battle system and an additional adventure featuring Yuffie Kisaragi.",
       "category": "Action",
@@ -122,7 +122,7 @@
       "active": false
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Ni no Kuni",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
       "category": "Anime",
@@ -133,7 +133,7 @@
       "active": false
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "F1® 24",
       "description": "Get closer to the grid like never before with EA SPORTS™ F1® 24. LIMITED TIME ONLY — Pre-order* F1® 24 Champions Edition by April 24th, 2024 and receive 2024 liveries and esports liveries in F1® 23 and much more!",
       "category": "Racing",

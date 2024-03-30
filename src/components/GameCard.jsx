@@ -18,7 +18,7 @@ function GameCard( {game} ) {
               return;
           }
   
-          const response = await fetch(`http://localhost:3004/games/${game.id}`, {
+          const response = await fetch(`http://localhost:3000/games/${game.id}`, {
               method: 'PATCH',
               headers: {
                   'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ function GameCard( {game} ) {
 
 const handleRemoveFromWishlist = async (game) => {
     try {
-        const response = await fetch(`http://localhost:3004/games/${game.id}`, {
+        const response = await fetch(`http://localhost:3000/games/${game.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

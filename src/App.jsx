@@ -17,7 +17,7 @@ function App() {
   const [games, setGames] = useState([])
   
   const fetchData = () => {
-    fetch("http://127.0.0.1:3004/games")
+    fetch("http://localhost:3000/games")
       .then(res => res.json())
       .then(data => {
         setGames(data)
