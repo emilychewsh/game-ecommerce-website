@@ -1,5 +1,6 @@
 .index {
     width: 20%;
+    min-width: 200px;
     height: 100%;
     padding: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -25,6 +26,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+  overflow: hidden; /* Hide overflowing text */
 }
 
 .index .nav {
@@ -67,4 +69,12 @@
   gap: 30px;
   overflow: hidden;
   transition: 0.5s;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .index {
+    width: 100%; /* Occupy full width on smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
 }
