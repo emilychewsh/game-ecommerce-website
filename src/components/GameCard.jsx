@@ -71,10 +71,23 @@ const handleRemoveFromWishlist = async (game) => {
 };
 
     //Fx to handle adding games to bag
-    const handleAddToBag = game => {
-        if (bag.includes(game)) return;
-        setBag([...bag, game])
-    } 
+    const handleAddToBag = (game) => {
+        // Check if the game is already in the bag
+        if (bag.some(item => item.id === game.id)) {
+            console.log('Game already in bag');
+            return;
+        }
+        
+        // Add the game to the bag
+        const updatedBag = [...bag, game];
+        setBag(updatedBag);
+        localStorage.setItem('bag', JSON.stringify(updatedBag));
+    };
+
+    useEffect(() => {
+        const savedBag = JSON.parse(localStorage.getItem('bag')) || [];
+        setBag(savedBag);
+    }, [setBag]);
 
     return (
         <div className="col-xl-3 col-lg-4 col-md-6">
@@ -90,8 +103,11 @@ const handleRemoveFromWishlist = async (game) => {
                         <Card.Text className='gamePrice'>
                             {`A$ ${game.price}`}
                         </Card.Text>
-                        <Button variant="primary" onClick={() => handleAddToBag(game)}> 
-                        {bag.includes(game) ? 'Added To Cart!' : "Add To Cart"}</Button>
+                        <Button variant="primary" 
+                        onClick={() => handleAddToBag(game)}> 
+                        {bag.some(item => item.id === game.id) ? 'Added To Cart!' : "Add To Cart"}
+                        </Button>
+                        
                         <Button variant="primary" 
                         className={`like ${wishlist.some(item => item.id === game.id) ? 'active' : ''}`} 
                         onClick={

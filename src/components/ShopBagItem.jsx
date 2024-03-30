@@ -6,9 +6,12 @@ import { AppContext } from '../App'
 function ShopBagItem({game, index}) {
   
   const {bag, setBag} = useContext(AppContext)
-  const handleRemoveFromBag = (game) => {
-    setBag(bag.filter(item=> item.id !== game.id))
-  }
+  
+  const handleRemoveFromBag = () => {
+    const updatedBag = bag.filter(item => item.id !== game.id);
+    setBag(updatedBag);
+    localStorage.setItem('bag', JSON.stringify(updatedBag));
+};
 
   return (
     <tr className='shopBagItem'>

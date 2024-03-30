@@ -23,10 +23,16 @@ function MyBag( { games } ) {
     setTotal(handleTotalPay())
   }, [games])
 
+  useEffect(() => {
+    const savedBag = JSON.parse(localStorage.getItem('bag')) || [];
+    setBag(savedBag);
+}, [setBag]);
+
   const handleClearBag = () => {
-    setBag([]);
+    setBag([]); // Clear the bag by setting it to an empty array
+    localStorage.removeItem('bag'); // Remove bag data from localStorage
     setShowModal(true);
-  }
+  };
 
   const handleCloseModal = () => {
     setShowModal(false); // Close modal

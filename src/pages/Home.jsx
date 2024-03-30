@@ -16,7 +16,6 @@ function Home( {games} ) {
       active: filter.name === "All"
     })));
     
-    
 
     // Set data to all games initially
     setData(games);
