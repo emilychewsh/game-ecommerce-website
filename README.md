@@ -1,6 +1,6 @@
 # CRUX GAMES SHOP - Game Ecommerce Web App
 
-Welcome to my first React JS project! Using React \* Vite
+Welcome to my first React JS project! Using React \- Vite <br>
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
@@ -45,31 +45,34 @@ cd /src/data
 
 ## How to Navigate the Web App
 
-🎮 #Home Page <br>
+# 🎮 Home Page <br>
+
 This is the default page where all games are displayed.
 
-    * Categories sorted by the genre of games
-    * Search bar to look for a specific game
-    * 'Add to Cart' button which would reflect on top right cart icon, clicking it will navigate user to My Bag page
-    * Heart button which would reflect on top right heart icon, clicking it will navigate user to My Wishlist page
-    * Message will show when users try to click Add to Cart button again
+    - Categories sorted by the genre of games
+    - Search bar to look for a specific game
+    - 'Add to Cart' button which would reflect on top right cart icon, clicking it will navigate user to My Bag page
+    - Heart button which would reflect on top right heart icon, clicking it will navigate user to My Wishlist page
+    - Message will show when users try to click Add to Cart button again
 
 <br>
 
-🎮 #Wishlist Page <br>
+# 🎮 Wishlist Page <br>
+
 Displays all games that have been liked.
 
-    * Option to 'unheart' to remove game
-    * Option to Add to Cart
+    - Option to 'unheart' to remove game
+    - Option to Add to Cart
 
 <br>
 
-🎮 #Bag Page <br>
+# 🎮Bag Page <br>
+
 Displays games that have been added to Cart.
 
-    * Option to delete games from cart
-    * Display total price
-    * Checkout button when clicked will show message
+    - Option to delete games from cart
+    - Display total price
+    - Checkout button when clicked will show message
 
 <br>
 
