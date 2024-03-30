@@ -10,6 +10,12 @@ function GameCard( {game} ) {
     const {wishlist, setWishlist, bag, setBag} = useContext(AppContext)
     
 
+    useEffect(() => {
+        const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        setBag(savedWishlist);
+    }, [setWishlist]);
+
+    
     //Fx to handle adding and removing games to wishlist
     const handleAddToWishlist = async (game) => {
       try {

@@ -1,13 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./home.css"
 import Header from '../components/Header'
 import GameCard from '../components/GameCard'
 import filterGenreData from '../data/filterGenreData'
+import { AppContext } from '../App'
 
 function Home( {games} ) {
   const [data, setData] = useState(games)
-  
   const [filters, setFilters] = useState(filterGenreData)
+  const {wishlist, setWishlist} = useContext(AppContext)
+
+
+  useEffect(() => {
+    const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    setWishlist(savedWishlist);
+  }, [setWishlist]);
 
   useEffect(() => {
     // Set "All" category as active by default
