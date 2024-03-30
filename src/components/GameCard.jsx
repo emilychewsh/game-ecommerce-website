@@ -8,6 +8,7 @@ function GameCard( {game} ) {
 
     // UseContext hook for adding games to wishlist and bag
     const {wishlist, setWishlist, bag, setBag} = useContext(AppContext)
+    
 
     //Fx to handle adding and removing games to wishlist
     const handleAddToWishlist = async (game) => {
@@ -52,7 +53,15 @@ const handleRemoveFromWishlist = async (game) => {
             }),
         });
         if (response.ok) {
-            setWishlist(wishlist.filter((item) => item.id !== game.id));
+            // Check if wishlist is defined before using the some method
+            if (wishlist && wishlist.some((item) => item.id === game.id)) {
+                // Filter out the removed game from wishlist
+                const updatedWishlist = wishlist.filter((item) => item.id !== game.id);
+                // Update the wishlist state with the updated array
+                setWishlist(updatedWishlist);
+                // Update localStorage with the updated wishlist
+                localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+            }
         } else {
             console.error('Failed to remove game from wishlist');
         }
@@ -60,6 +69,7 @@ const handleRemoveFromWishlist = async (game) => {
         console.error('Error removing game from wishlist:', error);
     }
 };
+
     //Fx to handle adding games to bag
     const handleAddToBag = game => {
         if (bag.includes(game)) return;
@@ -85,7 +95,7 @@ const handleRemoveFromWishlist = async (game) => {
                         <Button variant="primary" 
                         className={`like ${wishlist.some(item => item.id === game.id) ? 'active' : ''}`} 
                         onClick={
-                            wishlist.includes(game) ? 
+                            wishlist.some(item => item.id === game.id) ? 
                             () => handleRemoveFromWishlist(game) :
                             () => handleAddToWishlist(game)
                         }>

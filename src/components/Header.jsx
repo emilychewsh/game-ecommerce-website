@@ -7,6 +7,11 @@ import { Nav } from 'react-bootstrap'
 
 function Header() {
     const {wishlist, bag} = useContext(AppContext)
+
+    // Check if wishlist and bag are defined before accessing their length properties
+    const wishlistCount = wishlist ? wishlist.length : 0;
+    const bagCount = bag ? bag.length : 0;
+
   return (
     <header>
         <a href='#' className='menu'>
@@ -16,11 +21,11 @@ function Header() {
         <div className='userItems'>
             <NavLink to="/myWishlist" className='icon'>
                 <i className='bi bi-heart-fill'></i>
-                <span className='like'>{wishlist.length}</span>
+                <span className='like'>{wishlistCount}</span>
             </NavLink>
             <NavLink to="/myBag" className='icon'>
                 <i className='bi bi-bag-fill'></i>
-                <span className='like'>{bag.length}</span>
+                <span className='like'>{bagCount}</span>
             </NavLink>
         </div>
     </header>
