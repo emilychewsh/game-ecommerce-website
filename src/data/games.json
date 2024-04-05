@@ -7,8 +7,7 @@
         "rating": 5,
         "price": 36.5,
         "img": "src/assets/games/hades-bg.jpeg",
-        "trailer": "https://youtu.be/Bz8l935Bv0Y?si=gKUe9hsSSxlJGUcL",
-        "active": false
+        "trailer": "https://youtu.be/Bz8l935Bv0Y?si=gKUe9hsSSxlJGUcL"
       },
       {
         "id": 2,
@@ -18,8 +17,7 @@
         "rating": 5,
         "price": 89.95,
         "img": "src/assets/games/eldenring-bg.jpeg",
-        "trailer": "https://youtu.be/qLZenOn7WUo?si=0ppeRMK8L8hmA85l",
-        "active": false
+        "trailer": "https://youtu.be/qLZenOn7WUo?si=0ppeRMK8L8hmA85l"
       },
       {
         "id": 3,
@@ -29,8 +27,7 @@
         "rating": 4,
         "price": 59.95,
         "img": "src/assets/games/helldivers2-bg.jpeg",
-        "trailer": "https://youtu.be/UC5EpJR0GBQ?si=pAkEaT5KqgHfYpjs",
-        "active": false
+        "trailer": "https://youtu.be/UC5EpJR0GBQ?si=pAkEaT5KqgHfYpjs"
       },
       {
         "id": 4,
@@ -40,8 +37,7 @@
         "rating": 3,
         "price": 84.95,
         "img": "src/assets/games/king-of-fighters-xv.jpeg",
-        "trailer": "https://youtu.be/i-R_EQUIRA8?si=0BqJ4arivBoFhic1",
-        "active": false
+        "trailer": "https://youtu.be/i-R_EQUIRA8?si=0BqJ4arivBoFhic1"
       },
       {
         "id": 5,
@@ -51,8 +47,7 @@
         "rating": 4,
         "price": 89.95,
         "img": "src/assets/games/zelda-bg.jpeg",
-        "trailer": "https://youtu.be/uHGShqcAHlQ?si=5LoMFm4jR-1t58lD",
-        "active": false
+        "trailer": "https://youtu.be/uHGShqcAHlQ?si=5LoMFm4jR-1t58lD"
       },
       {
         "id": 6,
@@ -62,8 +57,7 @@
         "rating": 4,
         "price": 89.95,
         "img": "src/assets/games/halo-bg.jpeg",
-        "trailer": "https://www.youtube.com/embed/PyMlV5_HRWk",
-        "active": false
+        "trailer": "https://www.youtube.com/embed/PyMlV5_HRWk"
       },
       {
         "id": 7,
@@ -73,8 +67,7 @@
         "rating": 4,
         "price": 94.95,
         "img": "src/assets/games/persona5-bg.jpeg",
-        "trailer": "https://youtu.be/SKpSpvFCZRw?si=u3u7p-S0s4iBaV1l",
-        "active": true
+        "trailer": "https://youtu.be/SKpSpvFCZRw?si=u3u7p-S0s4iBaV1l"
       },
       {
         "id": 8,
@@ -84,8 +77,7 @@
         "rating": 3,
         "price": 29.95,
         "img": "src/assets/games/streetfighter-bg.jpeg",
-        "trailer": "https://youtu.be/0nFd7Iylj5A?si=ksxK3txhahjgcREO",
-        "active": false
+        "trailer": "https://youtu.be/0nFd7Iylj5A?si=ksxK3txhahjgcREO"
       },
       {
         "id": 9,
@@ -95,8 +87,7 @@
         "rating": 3,
         "price": 9.99,
         "img": "src/assets/games/lol-bg.jpeg",
-        "trailer": "https://www.youtube.com/embed/vzHrjOMfHPY",
-        "active": false
+        "trailer": "https://www.youtube.com/embed/vzHrjOMfHPY"
       },
       {
         "id": 10,
@@ -106,8 +97,7 @@
         "rating": 3,
         "price": 79.95,
         "img": "src/assets/games/mario-bg.jpeg",
-        "trailer": "https://www.youtube.com/embed/tKlRN2YpxRE",
-        "active": false
+        "trailer": "https://www.youtube.com/embed/tKlRN2YpxRE"
       },
       {
         "id": 11,
@@ -117,8 +107,7 @@
         "rating": 4,
         "price": 114.95,
         "img": "src/assets/games/finalfantasy-bg.jpeg",
-        "trailer": "https://youtu.be/Ge73iBqc7o8?si=_IsbMylUCPSERQel",
-        "active": false
+        "trailer": "https://youtu.be/Ge73iBqc7o8?si=_IsbMylUCPSERQel"
       },
       {
         "id": 12,
@@ -128,8 +117,7 @@
         "rating": 5,
         "price": 74.95,
         "img": "src/assets/games/ninokuni-bg.jpeg",
-        "trailer": "https://youtu.be/vGzdeUCVWOE?si=M87ORchq_zWoF7dj",
-        "active": false
+        "trailer": "https://youtu.be/vGzdeUCVWOE?si=M87ORchq_zWoF7dj"
       },
       {
         "id": 13,
@@ -139,7 +127,6 @@
         "rating": 4,
         "price": 99.95,
         "img": "src/assets/games/f1-bg.jpeg",
-        "trailer": "https://youtu.be/4rCs87muGjc?si=Pb-p6ewcvMMXaFrS",
-        "active": false
+        "trailer": "https://youtu.be/4rCs87muGjc?si=Pb-p6ewcvMMXaFrS"
       }
   ]

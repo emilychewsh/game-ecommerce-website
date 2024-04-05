@@ -1,38 +1,31 @@
 const filterGenreData = [
     {
       id: 1,
-      name: 'All',
-      active: true,
+      name: 'All'
     },
     {
       id: 2,
-      name: 'RPG',
-      active: false,
+      name: 'RPG'
     },
     {
       id: 3,
-      name: 'MOBA',
-      active: false,
+      name: 'MOBA'
     },
     {
       id: 4,
-      name: 'Battle',
-      active: false,
+      name: 'Battle'
     },
     {
       id: 5,
-      name: 'Racing',
-      active: false,
+      name: 'Racing'
     },
     {
       id: 6,
-      name: 'Action',
-      active: false,
+      name: 'Action'
     },
     {
         id: 7,
-        name: 'Anime',
-        active: false,
+        name: 'Anime'
     }
 ];
   
