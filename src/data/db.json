@@ -9,7 +9,7 @@
       "price": 36.5,
       "img": "src/assets/games/hades-bg.jpeg",
       "trailer": "https://youtu.be/Bz8l935Bv0Y?si=gKUe9hsSSxlJGUcL",
-      "active": false
+      "active": true
     },
     {
       "id": "2",
@@ -20,7 +20,7 @@
       "price": 89.95,
       "img": "src/assets/games/eldenring-bg.jpeg",
       "trailer": "https://youtu.be/qLZenOn7WUo?si=0ppeRMK8L8hmA85l",
-      "active": false
+      "active": true
     },
     {
       "id": "3",

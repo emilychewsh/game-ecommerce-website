@@ -5,7 +5,6 @@ const navListData = [
       target: 'home',
       name: `Home`,
       icon: 'bi-house-door',
-      active: true,
     },
     {
       id: 2,
@@ -13,7 +12,6 @@ const navListData = [
       target: 'library',
       name: `My Wishlist`,
       icon: 'bi-heart',
-      active: false,
     },
     {
       id: 3,
@@ -21,7 +19,6 @@ const navListData = [
       target: 'bag',
       name: `My Bag`,
       icon: 'bi-bag',
-      active: false,
     },
   ];
   
