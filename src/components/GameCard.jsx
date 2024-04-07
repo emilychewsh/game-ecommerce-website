@@ -41,6 +41,7 @@ function GameCard( {game} ) {
                   active: true, // Set active attribute to true
               }),
           });
+          
           if (response.ok) {
               // Update the wishlist state only after successful response from the server
               const updatedWishlist = [...wishlist, { ...game, active: true }];
@@ -64,7 +65,7 @@ function GameCard( {game} ) {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    active: false, // Set active attribute to false
+                    active: false // Set active attribute to false
                 }),
             });
             if (response.ok) {
