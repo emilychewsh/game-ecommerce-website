@@ -94,4 +94,12 @@ If you would like to contribute to the project development:
 2. Create a new branch for your feature or bug fix.
 3. Make your changes and submit a pull request.
 
-Feel free to adjust any details or formatting to better suit your project and preferences!
+Feel free to adjust any details or formatting to better suit your project and preferences.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any inquiries or feedback, please contact codewithemilychew@gmail.com.
